@@ -1,0 +1,40 @@
+.App {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comming {
+    &__header {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        padding: 0;
+        box-sizing: border-box;
+        font-weight: 900;
+        margin: 0;
+        padding-bottom: 25px;
+        text-align: center;
+        font-family: Poppins-Bold;
+        font-size: 50px;
+        line-height: 1.1;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        font-weight: 400;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding-bottom: 48px;
+        text-align: center;
+        font-family: Lato-Light;
+        font-size: 25px;
+        line-height: 1.2;
+        color: #fff;
+    }
+}
