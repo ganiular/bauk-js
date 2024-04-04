@@ -1,0 +1,158 @@
+@use '../../styles/partials/colors';
+@use '../../styles/partials/mixins';
+
+.journal-page {
+    &__section {
+        padding: 16px;
+
+        &--split {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+}
+
+.journal {
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$primary-dark;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+
+    &__image {
+        width: 120px;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    &__context {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    &__name {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    &__detail-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        justify-content: center;
+    }
+
+    &__detail {
+        padding: 4px 0;
+        display: flex;
+        gap: 4px;
+
+        &-name {
+            font-weight: 600;
+        }
+    }
+
+    &__description {
+        margin: 0;
+        text-align: justify;
+
+        &:first-of-type::first-letter {
+            font-size: 2.5em;
+        }
+
+    }
+}
+
+.publishers,
+.contacts {
+    &__title {
+        margin: 0 0 0.5em;
+        color: colors.$text2;
+    }
+}
+
+.publisher,
+.contact {
+    &__title {
+        font-size: 1em;
+        font-weight: 600;
+        color: colors.$label
+    }
+
+    &__items {
+        padding-left: 24px;
+        padding-bottom: 16px;
+        padding-top: 4px;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+@include mixins.tablet {
+    .journal-page {
+        &__section {
+            padding: 24px;
+
+            &--split {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+    }
+
+    .journal {
+        flex-direction: row;
+        justify-content: center;
+        padding: 24px;
+        gap: 24px;
+
+        &__image {
+            width: 160px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        &__context {
+            align-items: start;
+            gap: 24px;
+        }
+
+        &__detail-list {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: start;
+        }
+    }
+}
+
+@include mixins.desktop {
+    .journal-page {
+        &__section {
+            padding: 24px 15%;
+        }
+    }
+
+    .journal {
+        &__detail-list {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: start;
+        }
+
+        &__context {
+            font-size: 16px;
+        }
+
+        &__name {
+            font-size: 28px;
+        }
+    }
+}
