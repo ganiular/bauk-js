@@ -6,7 +6,7 @@ function Publicher({ publisher }) {
         <div className="publisher__title">{publisher.title}</div>
         <div className="publisher__items">
             {publisher.participants.map((p, i) => (
-                <div className='publisher__participant'>{p}</div>
+                <div key={i} className='publisher__participant'>{p}</div>
             ))}
         </div>
     </div>
@@ -35,7 +35,7 @@ function JournalPage() {
         {
             title: "Managing Editor",
             participants: [
-                "Dr. Bojande Tavershima", "Dr. Bojande Tavershima"
+                "Dr. Bojande Tavershima"
             ]
         },
         {
@@ -56,11 +56,11 @@ function JournalPage() {
         <div className='journal-page__section journal'>
             <img className='journal__image' src={journalImg} alt="Journal" />
             <div className='journal__context'>
-                <div className='journal__name'>Journal Name Here</div>
+                <div className='journal__name'>BAUK JOURNAL OF SOCIOLOGY</div>
                 <div className='journal__detail-list'>
                     <div className='journal__detail'>
                         <span className='journal__detail-name'>Published by:</span>
-                        <span className='journal__detail-value'>Author name here</span>
+                        <span className='journal__detail-value'>Department of Sociology, Baba-Ahmed University, Kano</span>
                     </div>
                     <div className='journal__detail'>
                         <span className='journal__detail-name'>ISSN(Print):</span>
@@ -70,15 +70,13 @@ function JournalPage() {
                         <span className='journal__detail-name'>ISSN(Online):</span>
                         <span className='journal__detail-value'>1597-8966</span>
                     </div>
-                    <div className='journal__detail'>
-                        <span className='journal__detail-name'>Other Info:</span>
-                        <span className='journal__detail-value'>Value</span>
-                    </div>
                 </div>
             </div>
         </div>
         <div className='journal-page__section'>
-            <p className='journal__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur mollitia ratione voluptates porro aperiam aspernatur. Illo aliquam odio, esse voluptates veritatis quis optio fugit fuga repellat, dolores officiis provident.</p>
+            <p className='journal__description'>The Baba-Ahmed University Kano (BAUK) Journal of Sociology welcomes multidisciplinary contributions that speak to sociological audience drawing from an array of qualitative
+                and quantitaitive methods. The Journal is a peer review journal that is published Bi-Annual by the Department of Sociology, Baba Ahmed University Kano.
+                The Journal publish both theoretical and empirical research works that contribute to knowledge.</p>
         </div>
         <div className='journal-page__section journal-page__section--split'>
             <div className='publishers'>
