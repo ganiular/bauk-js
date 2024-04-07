@@ -27,7 +27,7 @@ function JournalPage() {
             ]
         },
         {
-            title: "Assistance Chief Editor",
+            title: "Assistant Chief Editor",
             participants: [
                 "Dr. Anthony Abah Ebonyi"
             ]
@@ -74,8 +74,8 @@ function JournalPage() {
             </div>
         </div>
         <div className='journal-page__section'>
-            <p className='journal__description'>The Baba-Ahmed University Kano (BAUK) Journal of Sociology welcomes multidisciplinary contributions that speak to sociological audience drawing from an array of qualitative
-                and quantitaitive methods. The Journal is a peer review journal that is published Bi-Annual by the Department of Sociology, Baba Ahmed University Kano.
+            <p className='journal__description'>The Baba-Ahmed University, Kano (BAUK) Journal of Sociology welcomes multidisciplinary contributions that speak to sociological audience drawing from an array of qualitative
+                and quantitative methods. The Journal is a peer review journal that is publishes Bi-Annual by the Department of Sociology, Baba-Ahmed University, Kano.
                 The Journal publish both theoretical and empirical research works that contribute to knowledge.</p>
         </div>
         <div className='journal-page__section journal-page__section--split'>
