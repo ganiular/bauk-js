@@ -9,10 +9,11 @@ import JournalPage from './pages/JournalPage/JournalPage';
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path='/' element={<JournalPage />} />
+          <Route path="/index" element={<JournalPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />
