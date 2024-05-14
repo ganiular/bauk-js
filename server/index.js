@@ -15,8 +15,8 @@ app.use('/users', require('./routes/user_routes.js'))
 
 app.get('*', (req, res) => {
     const indexPath = path.join(__dirname, '..', 'build', 'index.html')
-    console.log('Get: /');
-    res.sendFile(indexPath)
+    console.log('Get:', req.url);
+    res.sendFile(indexPath);
 })
 
 app.use(errorHandler)
