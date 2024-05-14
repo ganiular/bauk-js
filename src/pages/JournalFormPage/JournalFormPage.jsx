@@ -1,11 +1,8 @@
+import './JournalFormPage.scss';
 import axios from 'axios';
-import './LoginPage.scss';
 import { BASE_URL } from '../../config';
-import { useNavigate } from 'react-router-dom';
 
-export default function LoginPage() {
-    const navigate = useNavigate()
-
+export default function JournalFormPage() {
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -27,8 +24,7 @@ export default function LoginPage() {
 
         axios.post(`${BASE_URL}/auth/login`, formData)
             .then(res => {
-                sessionStorage.setItem("token", res.data.token);
-                navigate("/add-article")
+                console.log(res);
             })
             .catch(error => {
                 if (error.response?.status === 404) {
@@ -49,20 +45,31 @@ export default function LoginPage() {
         e.target.classList.remove('error')
         e.target.setCustomValidity('')
     }
-
-    return <main className="login_page">
-        <div className="login_page-content">
-            <h1 className='login_page-title'>Login</h1>
+    return <main className="form_page">
+        <div className="form_page-content">
+            <h1 className='form_page-title'>Add Journal Article</h1>
             <form action="" className='form' onSubmit={handleSubmit} noValidate>
                 <div className="form-field">
-                    <label className='form-label' htmlFor="email">Email</label>
-                    <input className='form-input' type="email" name='email' placeholder='Your email' onChange={removeError} />
+                    <label className='form-label' htmlFor="title">Title</label>
+                    <input className='form-input' type="text" name='title' placeholder='' onChange={removeError} />
                 </div>
                 <div className="form-field">
-                    <label className='form-label' htmlFor="password">Password</label>
-                    <input className='form-input' type="password" name='password' onChange={removeError} />
+                    <label className='form-label' htmlFor="abstract">Abstract</label>
+                    <textarea name="abstract" id="" cols="30" rows="10" className="form-input"></textarea>
                 </div>
-                <button className='form-submit'>Login</button>
+                <div className="form-field">
+                    <label className='form-label' htmlFor="email">Keywords</label>
+                    <input className='form-input' type="text" name='keywords' placeholder='' onChange={removeError} />
+                </div>
+                <div className="form-field">
+                    <label className='form-label' htmlFor="dop">Date of Publication</label>
+                    <input className='form-input' type="date" name='dop' onChange={removeError} />
+                </div>
+                <div className="form-field">
+                    <label className='form-label' htmlFor="file">Article file</label>
+                    <input className='form-input' type="file" name='file' onChange={removeError} />
+                </div>
+                <button className='form-submit'>Submit</button>
             </form>
         </div>
     </main>
