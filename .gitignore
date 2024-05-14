@@ -25,3 +25,4 @@ yarn-error.log*
 .env
 server/.vscode/launch.json
 state.json
+.env.production
