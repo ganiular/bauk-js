@@ -1,0 +1,85 @@
+@use '../../styles/partials/colors';
+@use '../../styles/partials/mixins';
+
+.login_page {
+    &-content {
+        width: 80%;
+        margin: auto;
+    }
+
+    &-title {
+        color: #777;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &-label {}
+
+    &-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px;
+        border-radius: 6px;
+        border: 2px solid #aaa;
+
+        &:focus {
+            outline: 2px solid rgba($color: colors.$primary, $alpha: 0.6);
+            border-color: rgba($color: colors.$primary, $alpha: 0.6);
+        }
+
+        &.error {
+            border-color: rgb(240, 95, 95);
+            outline-color: rgb(240, 95, 95);
+        }
+    }
+
+    &-submit {
+        padding: 8px;
+        background-color: colors.$primary-dark;
+        border-radius: 20px;
+        border: none;
+        color: white;
+
+        &:hover {
+            background-color: colors.$primary;
+        }
+    }
+}
+
+@include mixins.tablet {
+    .login_page {
+        &-content {
+            width: 300px;
+        }
+    }
+}
+
+@include mixins.desktop {
+    .login_page {
+        &-content {
+            width: 360px;
+        }
+    }
+
+    .form {
+        gap: 24px;
+
+        &-input {
+            font-size: 18px;
+        }
+
+        &-submit {
+            font-size: 16px;
+        }
+    }
+}

@@ -23,18 +23,55 @@
     }
 }
 
+.header_nav {
+    display: flex;
+    border-bottom: 4px solid yellow;
+    border-radius: 20px;
+
+    &-link {
+        background-color: colors.$primary-dark;
+        color: white;
+        text-decoration: none;
+        padding: 8px 12px;
+        text-align: center;
+        flex: 1;
+        font-size: 14px;
+        border-left: 1px solid #888;
+
+        &:hover,
+        &--active {
+            background-color: colors.$primary;
+        }
+
+        &:first-child {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding-left: 16px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-right: 16px;
+        }
+    }
+}
+
 .header {
     background-color: colors.$background;
-    padding: 20px 12px;
+    padding: 20px 12px 8px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-shadow: 1px 1px 1px colors.$border;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 @include mixins.tablet {
     .header {
         padding: 20px 24px;
     }
+
 }
 
 @include mixins.desktop {

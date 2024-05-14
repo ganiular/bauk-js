@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 // import HomePage from './pages/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import JournalPage from './pages/JournalPage/JournalPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<JournalPage />} />
           <Route path="/index" element={<JournalPage />} />
+          <Route path='/login' element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />
