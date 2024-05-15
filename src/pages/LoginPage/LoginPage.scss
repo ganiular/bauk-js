@@ -23,7 +23,15 @@
         gap: 4px;
     }
 
-    &-label {}
+    &-required {
+        font-size: small;
+        color: red;
+    }
+
+    &-optional {
+        font-size: small;
+        color: gray;
+    }
 
     &-input {
         width: 100%;

@@ -1,0 +1,43 @@
+@use '../../styles/partials/mixins';
+
+.article_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+.article_item {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+
+    &-cover_image {
+        width: 86px;
+    }
+
+    &-context {
+        display: flex;
+        gap: 8px;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &-title {
+        font-size: larger;
+    }
+}
+
+@include mixins.tablet {
+    .article_list {
+        padding: 24px 8%;
+    }
+}
+
+@include mixins.desktop {
+    .article_list {
+        padding: 24px 15%;
+    }
+}

@@ -13,13 +13,7 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "sass": "^1.72.0",
-    "web-vitals": "^2.1.4",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.2"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "serve": "node server/index.js",

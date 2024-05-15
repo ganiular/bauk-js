@@ -1,5 +1,7 @@
+@use '../../styles/partials/mixins';
+
 .form_page {
-    margin: 42px 0;
+    margin: 24px 0;
 
     &-content {
         width: 80%;
@@ -8,5 +10,17 @@
 
     &-title {
         color: #777;
+    }
+}
+
+
+@include mixins.tablet {
+    .form_page {
+        margin: 42px 0;
+
+        &-content {
+            width: auto;
+            margin: 0 20%;
+        }
     }
 }
