@@ -1,0 +1,35 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/colors';
+
+.achive_page {
+    margin: 24px;
+
+    &-title {
+        color: gray;
+    }
+
+    &-main_list {
+        font-size: 20px;
+    }
+
+    &-main_item {
+        padding: 8px 0;
+        color: colors.$primary;
+    }
+
+    &-sub_item {
+        padding: 8px 0;
+    }
+}
+
+@include mixins.tablet {
+    .achive_page {
+        margin: 24px 8%;
+    }
+}
+
+@include mixins.desktop {
+    .achive_page {
+        margin: 24px 15%;
+    }
+}

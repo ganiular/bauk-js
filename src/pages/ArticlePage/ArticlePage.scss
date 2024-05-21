@@ -1,0 +1,57 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/colors';
+
+.article_page {
+    margin: 24px;
+
+    &-label {
+        font-size: 18px;
+        margin: 0 0 2em;
+        color: #777;
+    }
+
+    &-title {
+        color: colors.$primary;
+    }
+
+    &-actions {
+        margin: 2em 0 1em;
+        display: flex;
+        gap: 16px;
+
+        &--link {
+            font-weight: bold;
+        }
+    }
+}
+
+.abstract {
+    &-title {
+        font-size: 2em;
+        margin: 1em 0;
+    }
+
+    &-body {
+        text-align: justify;
+        line-height: 1.5;
+        margin-bottom: 2em;
+    }
+}
+
+.keywords {
+    &-title {
+        font-size: large;
+    }
+}
+
+@include mixins.tablet {
+    .article_page {
+        margin: 24px 8%;
+    }
+}
+
+@include mixins.desktop {
+    .article_page {
+        margin: 24px 15%;
+    }
+}

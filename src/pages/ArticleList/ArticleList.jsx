@@ -10,7 +10,7 @@ function ArticleItem({ article }) {
     return <div className="article_item">
         <img className="article_item-cover_image" src={coverImg} alt="Cover" />
         <div className="article_item-context">
-            <Link to={`/issue/view/${article._id}`} className="article_item-title">{article.title}</Link>
+            <Link to={`/article/view/${article._id}`} className="article_item-title">{article.title}</Link>
             <div>{new Date(article.publicationDate).toLocaleDateString('en', { month: 'long', year: 'numeric' })}</div>
         </div>
     </div>
@@ -22,12 +22,14 @@ export default function ArticleList() {
     useEffect(() => {
         axios.get(`${BASE_URL}/articles`)
             .then(res => {
+                console.log(res);
                 setArticles(res.data);
             })
             .catch(console.error)
     }, [])
 
     if (articles === null) return <ListLoader />
+    console.log({ articles });
 
     return <div className="article_list">
         {articles.map(article => <ArticleItem article={article} key={article._id} />)}
